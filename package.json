@@ -2,6 +2,7 @@
   "name": "examen",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://evecarinagithub.io/firebaseTrello-vf",
   "dependencies": {
     "firebase": "^4.6.2",
     "react": "^16.0.0",
