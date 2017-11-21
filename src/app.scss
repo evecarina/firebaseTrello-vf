@@ -1,0 +1,186 @@
+#container-header {
+    width: 100%;
+    z-index: 200;
+    background-color: #550164;
+    line-height: 2.7em;
+    padding: 0 1.5em;
+    color: white;
+    height: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; }
+    @media only screen and (max-width: 500px) {
+      #container-header {
+        padding: 0; } }
+    #container-header img {
+      margin-top: 5px;
+      height: 32px;
+      width: 110px; }
+      @media only screen and (max-width: 500px) {
+        #container-header img {
+          width: 90px; } }
+    #container-header a {
+      background-color:#fff;
+      text-decoration: none;
+      color: rgb(0, 0, 0);
+      border-radius: 3px;
+      padding: .3em .5em;
+      line-height: 1em;
+      margin-left: 10px; }
+      #container-header a span {
+        color: rgba(0, 0, 0, 0.5); }
+      #container-header a:hover span {
+        color: white; }
+  
+  .container-sign {
+    padding: 0 50px;
+    margin: 20px 0; }
+    .container-sign input {
+      border: none;
+      padding: 1em;
+      font-size: 1.1em; }
+    .container-sign .btn {
+      width: 100%;
+      margin: 0;
+      padding: 1em;
+      font-size: 1.1em;
+      background: transparent;
+      color: white;
+      border: 1px solid white;
+      margin-top: 10px; }
+      .container-sign .btn:hover {
+        background: #f7efef;
+        color: #0079BF;
+        transition: all 0.15s; }
+  
+  .container-signin {
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.1em;
+    text-decoration: none; }
+  
+  /*add button*/
+  .addNew {
+    margin: -0.75em;
+    margin-top: 0.75em;
+    padding: 0.5em 0.75em;
+    color: #797a7c;
+    border-radius: 0 0 3px 3px;
+    cursor: pointer; }
+    .addNew:hover {
+      color: #696a6d;
+      background-color: rgba(200, 204, 206, 0.9); }
+  
+  /*board*/
+  #boards h3 {
+    color: white;
+    margin-bottom: 30px; }
+  #boards a {
+    text-decoration: none;
+    color: black; }
+  #boards .box.addNew {
+    margin: 0 0.5em 1em 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  
+  .box {
+    width: 100%;
+    background: rgba(222, 225, 227, 0.9);
+    border-radius: 3px;
+    margin: 0 0.5em 1em 0.5em;
+    line-height: 1.75em;
+    padding: 0.75em;
+    min-height: 5em; }
+    .box.addNew {
+      transition: all 0.15s ease-out 0s;
+      background: rgba(0, 0, 0, 0.1);
+      color: #bdc3c7;
+      margin: 0; }
+      .box.addNew:hover {
+        background-color: rgba(13, 155, 231, 0.452); }
+  
+  .cancel {
+    color: rgba(13, 155, 231, 0.452);
+    cursor: pointer; }
+    .cancel:hover {
+      color: #4c92ad; }
+  
+  /*board detail*/
+  #contenido {
+    overflow: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+    #contenido > div {
+      display: flex;
+      flex-direction: row;
+      margin: 0 30px; }
+    #contenido h3 {
+      margin: 0 30px 20px; }
+  
+  /*list*/
+  .list {
+    min-width: 300px;
+    margin: 0 10px; }
+  
+  .card {
+    background-color: white;
+    border-radius: 5px;
+    padding: 8px;
+    margin-bottom: 8px; }
+  
+  .loader {
+    font-size: 10px;
+    margin: 10% auto;
+    text-indent: -9999em;
+    width: 11em;
+    height: 11em;
+    border-radius: 50%;
+    background: white;
+    background: linear-gradient(to right, white 10%, rgba(255, 255, 255, 0.5) 42%);
+    position: relative;
+    animation: load 1.4s infinite linear; }
+    .loader:before {
+      width: 50%;
+      height: 50%;
+      background: white;
+      border-radius: 100% 0 0 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: ''; }
+    .loader:after {
+      background: #0079BF;
+      width: 75%;
+      height: 75%;
+      border-radius: 50%;
+      content: '';
+      margin: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0; }
+  
+  @keyframes load {
+    0% {
+      transform: rotate(0deg); }
+    100% {
+      transform: rotate(360deg); } }
+  body {
+    background-color: #c457d3;
+    font: 14px/18px "Helvetica Neue",Arial,Helvetica,sans-serif;
+    margin: 0;
+    padding: 0; }
+  
+  .error {
+    color: #E21515;
+    font-size: 1.1em;
+    margin-bottom: 10px; }
+  
+  /*# sourceMappingURL=App.css.map */
+  
