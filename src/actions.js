@@ -100,10 +100,10 @@ export function signIn(user, pass) {
         })
     })
 }
-export const auth = () => {
+// Autentificando de que el usuario exista
+export const authentication = () => {
     firebase.auth().onAuthStateChanged(usuario => {
         if (usuario) {
-            console.log('si');
             firebase.database().ref('users/' + usuario.uid).once('value').then(res => {
                 const fullUserInfo = res.val();
                 store.setState({
@@ -115,8 +115,6 @@ export const auth = () => {
                 })
             })
             readBoard('users/' + usuario.uid);
-        } else {
-            console.log('no')
         }
     });
 }

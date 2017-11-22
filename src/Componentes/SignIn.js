@@ -26,7 +26,7 @@ const SignIn = ({ user, login }) => {
           </FormGroup>
           <Button type="submit">Sign In</Button>
         </form>
-        <NavLink className='signin' to='/signup'>Register</NavLink>
+        <NavLink className='container-signin' to='/signup'>Register</NavLink>
       </div>
     </div>
   );

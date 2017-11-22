@@ -6,13 +6,7 @@ import { signOut } from '../actions';
 
 const Header = ({ user }) => {
     return (
-        <header id='container-header'>
-            <span>
-                <NavLink to='/boards'>
-                    <i class="fa fa-columns" aria-hidden="true"></i>
-                    <span> Boards</span>
-                </NavLink>
-            </span >
+        <header id='container-header'>           
             <Image  src={logo} width='150px' />
             <span>
                 <a href='#'>

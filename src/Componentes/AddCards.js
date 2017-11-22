@@ -10,7 +10,7 @@ class AddButton extends Component {
   }
   render() {
     const { list, board, card, IdBoard } = this.props;
-    const funcion = list ? addList : board ? addBoard : addCard;
+    const addAction = list ? addList : board ? addBoard : addCard;
     const parametro = board ? '' : list ? list : card;
     const NewState = () => {
       this.setState({
@@ -24,7 +24,7 @@ class AddButton extends Component {
             <div className={list || board ? 'box' : ''}>
               <form onSubmit={(e) => {
                 e.preventDefault();
-                card ? funcion(this.input.value, IdBoard, parametro) : funcion(this.input.value, parametro);
+                card ? addAction(this.input.value, IdBoard, parametro) : addAction(this.input.value, parametro);
                 NewState();
               }}>
                 <FormGroup>
@@ -34,7 +34,7 @@ class AddButton extends Component {
                     inputRef={ref => { this.input = ref; }}
                     onKeyDown={(e) => {
                       if (board && e.keyCode === 13) {
-                        funcion(this.input.value, parametro);
+                        addAction(this.input.value, parametro);
                         NewState();
                       }
                     }}

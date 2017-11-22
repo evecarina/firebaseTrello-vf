@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { FormControl, FormGroup, Image, Button } from 'react-bootstrap';
 import { NavLink, Redirect } from 'react-router-dom';
 import { signUser } from '../actions';
+import img from '../trello.svg'
+
 
 class SignUp extends Component {
   constructor(props) {
@@ -26,12 +28,15 @@ class SignUp extends Component {
       }
     }
     return (
-      <div align='center'>
+      <div align='center' className="container-form">
         <div style={{ width: '450px', marginTop: '20px' }}>
+        <img src={img} width='150px' marginButton= '20px'></img>
+
           {
+            
             user && <Redirect to="/boards" />
           }
-          <form className='sign' onSubmit={
+          <form className='container-sign' onSubmit={
             e => {
               e.preventDefault();
               this.setState({
@@ -60,7 +65,7 @@ class SignUp extends Component {
             {this.state.show && !this.state.confirm && <div className='error'>Password does not match</div>}
             <Button type='submit' >Sign Up</Button>
           </form>
-          <NavLink className='signin' to='/signin'>Sign in</NavLink>
+          <NavLink className='container-signin' to='/signin'>Sign in</NavLink>
         </div>
       </div>
     );
